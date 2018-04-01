@@ -1,12 +1,21 @@
 fos_user:
     db_driver:      orm # can be orm or odm
     firewall_name:  main
-    user_class:     Sonata\UserBundle\Entity\BaseUser
+    user_class:     App\Application\Sonata\UserBundle\Entity\User
 
 
     group:
-        group_class:   Sonata\UserBundle\Entity\BaseGroup
+        group_class:   App\Application\Sonata\UserBundle\Entity\Group
         group_manager: sonata.user.orm.group_manager # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
+
+
+    profile:
+        # Authentication Form
+        form:
+            type:               fos_user_profile
+            name:               fos_user_profile_form
+            validation_groups:  [Authentication] # Please note : this is not the default value
+
 
     service:
         user_manager: sonata.user.orm.user_manager

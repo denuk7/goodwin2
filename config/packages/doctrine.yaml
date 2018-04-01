@@ -32,3 +32,4 @@ doctrine:
                 alias: App
             SonataUserBundle: ~
             FOSUserBundle: ~
+            ApplicationSonataUserBundle: ~
