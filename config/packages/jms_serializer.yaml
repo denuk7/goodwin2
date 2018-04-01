@@ -1,0 +1,7 @@
+jms_serializer:
+    metadata:
+        directories:
+            -
+                path: "%kernel.root_dir%/../vendor/sonata-project/user-bundle/src/Resources/config/serializer/FOSUserBundle"
+                namespace_prefix: 'FOS\UserBundle'
+                name: 'jms'
