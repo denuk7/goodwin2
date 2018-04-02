@@ -1,8 +1,8 @@
-user_area:
-    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
-    prefix: /
-
-_sonata_user:
-    resource: .
-    type: sonata_user
-    prefix: /
+#user_area:
+#    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+#    prefix: /
+#
+#_sonata_user:
+#    resource: .
+#    type: sonata_user
+#    prefix: /
