@@ -19,20 +19,20 @@ security:
             security: false
 
         # -> custom firewall for the admin area of the URL
-        admin:
-            pattern:            /(.*)
-            context:            user
-            form_login:
-                provider:       fos_userbundle
-                login_path:     /login
-                use_forward:    false
-                check_path:     /login_check
-                failure_path:   null
-                default_target_path:   /dashboard
-            logout:
-                path:           /logout
-                target:         /login
-            anonymous:          true
+#        admin:
+#            pattern:            /(.*)
+#            context:            user
+#            form_login:
+#                provider:       fos_userbundle
+#                login_path:     /login
+#                use_forward:    false
+#                check_path:     /login_check
+#                failure_path:   null
+#                default_target_path:   /dashboard
+#            logout:
+#                path:           /logout
+#                target:         /login
+#            anonymous:          true
 
         # -> end custom configuration
 
@@ -49,7 +49,10 @@ security:
                 use_forward:    false
                 check_path:     /login_check
                 failure_path:   null
-            logout:             true
+                default_target_path:   /dashboard
+            logout:
+                path:           /logout
+                target:         /login
             anonymous:          true
 
     # Easy way to control access for large sections of your site
