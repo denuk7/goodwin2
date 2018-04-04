@@ -1,0 +1,16 @@
+{% extends '@SonataAdmin/CRUD/base_list_flat_inner_row.html.twig' %}
+
+{% block row %}
+
+    {# you can use fields defined in the the Admin class #}
+
+    {{ object|render_list_element(admin.list['status']) }} -
+    {{ object|render_list_element(admin.list['status']) }} -
+    {{ object|render_list_element(admin.list['status']) }} <br />
+
+    {#<small>#}
+        {# or you can use the object variable to render a property #}
+        {#{{ object.message }}#}
+    {#</small>#}
+
+{% endblock %}

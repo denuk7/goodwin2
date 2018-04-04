@@ -14,7 +14,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * @ORM\Entity
  * @Gedmo\SoftDeleteable(fieldName="deleted_at", timeAware=false, hardDelete=true)
- * @ORM\Table(name="order")
+ * @ORM\Table(name="gw_order")
  */
 class Order
 {
@@ -220,5 +220,4 @@ class Order
   {
     $this->updatedBy = $updatedBy;
   }
-
 }

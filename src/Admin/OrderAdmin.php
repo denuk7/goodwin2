@@ -14,7 +14,7 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Form\Type\Filter\DateType;
+use Sonata\CoreBundle\Form\Type\DatePickerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use App\Entity\Category;
@@ -27,8 +27,26 @@ class OrderAdmin  extends AbstractAdmin
   {
     $formMapper
       ->add('status', TextType::class)
-      ->add('date_start', DateType::class)
-      ->add('date_end', DateType::class)
+      ->add('date_start', DatePickerType::class, array(
+        'dp_pick_time' => false,
+        'dp_side_by_side'       => true,
+        'dp_use_current'        => false,
+        'dp_collapse'           => true,
+        'dp_calendar_weeks'     => false,
+        'dp_view_mode'          => 'days',
+        'dp_min_view_mode'      => 'days',
+        'format'=>'yyyy-MM-dd'
+      ))
+      ->add('date_end', DatePickerType::class, array(
+        'dp_pick_time' => false,
+        'dp_side_by_side'       => true,
+        'dp_use_current'        => false,
+        'dp_collapse'           => true,
+        'dp_calendar_weeks'     => false,
+        'dp_view_mode'          => 'days',
+        'dp_min_view_mode'      => 'days',
+        'format'=>'yyyy-MM-dd'
+      ))
     ;
   }
 
