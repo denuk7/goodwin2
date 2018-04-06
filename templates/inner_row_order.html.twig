@@ -3,11 +3,11 @@
 {% block row %}
 
     {# you can use fields defined in the the Admin class #}
-
-    {{ object|render_list_element(admin.list['status']) }} -
-    {{ object|render_list_element(admin.list['status']) }} -
-    {{ object|render_list_element(admin.list['status']) }} <br />
-
+    {#<td>#}
+        {#{{ object|render_list_element(admin.list['status']) }}#}
+    {#</td>#}
+        {{ object.status }}
+    {{ object.status }}
     {#<small>#}
         {# or you can use the object variable to render a property #}
         {#{{ object.message }}#}

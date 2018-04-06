@@ -54,7 +54,7 @@ class OrderAdmin  extends AbstractAdmin
   {
     $listMapper
       ->addIdentifier('id')
-      ->add('status')
+      ->add('status', null, array('template' => 'status_cell.html.twig'))
       ->add('date_start')
       ->add('date_end')
       ->add('created_at')

@@ -46,6 +46,6 @@ services:
         arguments: [~, App\Entity\Order, ~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Order }
-        calls:
-            - [setTemplates, [{inner_list_row: inner_row_order.html.twig, base_list_field: 'SonataAdminBundle:CRUD:base_list_flat_field.html.twig' }]]
+#        calls:
+#            - [setTemplates, [{inner_list_row: inner_row_order.html.twig, base_list_field: 'SonataAdminBundle:CRUD:base_list_flat_field.html.twig' }]]
         public: true
