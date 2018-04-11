@@ -12,6 +12,5 @@ sonata_admin:
         role_super_admin: ROLE_SUPER_ADMIN
 
 #    assets:
-#        stylesheets:
-#            ~
-#            - /public/css/main.css'
+#        extra_stylesheets:
+#            - bundles/sonataadmin/main.css

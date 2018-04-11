@@ -53,8 +53,16 @@ class OrderAdmin  extends AbstractAdmin
   protected function configureListFields(ListMapper $listMapper)
   {
     $listMapper
+      ->remove('batch')
+      ->add('batch' , 'batch', array(
+        'template' => 'status_cell.html.twig',
+        'label' => 'batch',
+        'code' => '_batch',
+        'sortable' => false,
+        'virtual_field' => true,
+      ))
       ->addIdentifier('id')
-      ->add('status', null, array('template' => 'status_cell.html.twig'))
+      ->add('status')
       ->add('date_start')
       ->add('date_end')
       ->add('created_at')
