@@ -61,8 +61,14 @@ class OrderAdmin  extends AbstractAdmin
         'sortable' => false,
         'virtual_field' => true,
       ))
-      ->addIdentifier('id')
+      ->addIdentifier('id', null, array(
+        'label' => "#"
+      ))
       ->add('status')
+      ->add('doc', null, array(
+        'template' => 'docs_cell.html.twig'
+      ))
+
       ->add('date_start')
       ->add('date_end')
       ->add('created_at')

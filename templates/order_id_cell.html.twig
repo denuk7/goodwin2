@@ -1,0 +1,8 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        <strong>{{ object.name }}</strong> <br />
+        {{ object.providername}} : {{ object.width }}x{{ object.height }} <br />
+    </div>
+{% endblock %}
