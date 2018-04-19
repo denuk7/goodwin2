@@ -1,5 +1,4 @@
 <!-- template for the modal component -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script type="text/x-template" id="modal-template">
     <transition name="modal">
         <div class="modal-mask">
@@ -31,16 +30,3 @@
         </div>
     </transition>
 </script>
-
-<!-- app -->
-<div id="app">
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
-    <!-- use the modal component, pass in the prop -->
-    <modal v-if="showModal" @close="showModal = false">
-        <!--
-          you can use custom content here to overwrite
-          default content
-        -->
-        <h3 slot="header">custom header</h3>
-    </modal>
-</div>

@@ -6,3 +6,10 @@
         {{ object.providername}} : {{ object.width }}x{{ object.height }} <br />
     </div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+
+{% endblock %}
