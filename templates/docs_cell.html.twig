@@ -6,6 +6,7 @@
         background-color: crimson;
     }
 </style>
+<script src="{{ asset('build/app.js') }}"></script>
 <td class="{{ object.status|lower }} sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }}" objectId="{{ admin.id(object) }}"{% if field_description.options.row_align is defined %} style="text-align:{{ field_description.options.row_align }}"{% endif %}>
     {% set route = field_description.options.route.name|default(null) %}
 
@@ -18,7 +19,11 @@
         <a class="sonata-link-identifier" href="{{ admin.generateObjectUrl(route, object, field_description.options.route.parameters) }}">
             {% block field %}
                 {#{{ object.status == 'cnf' ? 'Yes' : 'No' }}#}
+            {#<div id="app">#}
+                {##}
+            {#</div>#}
                 <div id="app">
+                    <example></example>
                     <button id="show-modal" @click="showModal = true">Show Modal</button>
                     <!-- use the modal component, pass in the prop -->
                     <modal v-if="showModal" @close="showModal = false">
