@@ -17,6 +17,7 @@
         "build": "encore production"
     },
     "dependencies": {
-        "babel-loader": "^7.1.4"
+        "babel-loader": "^7.1.4",
+        "bulma": "^0.7.1"
     }
 }
