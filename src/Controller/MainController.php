@@ -20,6 +20,6 @@ class MainController extends AbstractController
    */
   public function test()
   {
-    return new JsonResponse('TEST');
+    return $this->render('test.html.twig');
   }
 }

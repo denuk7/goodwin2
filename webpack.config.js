@@ -8,10 +8,11 @@ Encore
     // the public path used by the web server to access the previous directory
     .setPublicPath('/build')
 
-    // will create public/build/app.js and public/build/app.css
+    // will create public/build/app.js and public/build/global.scss
     // .addEntry('app', './assets/js/app.js')
-    .addEntry('app', './assets/js/app.js')
-    // .addStyleEntry('css/app', './assets/css/app.css')
+    .addEntry('js/app', './assets/js/app.js')
+    .addStyleEntry('css/app', './assets/css/global.scss')
+    // .addStyleEntry('css/app', './assets/css/global.scss')
 
     // allow legacy applications to use $/jQuery as a global variable
     .autoProvidejQuery()
@@ -26,11 +27,13 @@ Encore
     .enableBuildNotifications()
     .enableVueLoader()
 
-// create hashed filenames (e.g. app.abc123.css)
-// .enableVersioning()
+    // create hashed filenames (e.g. app.abc123.css)
+    // .enableVersioning()
 
-// allow sass/scss files to be processed
-// .enableSassLoader()
+    // allow sass/scss files to be processed
+    .enableSassLoader(function(sassOptions) {}, {
+        resolveUrlLoader: false
+    })
 ;
 
 // export the final configuration

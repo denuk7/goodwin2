@@ -1,10 +1,8 @@
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <!-- Any other Bulma elements you want -->
-  </div>
-  <button class="modal-close is-large" aria-label="close" @click="$emit('close')"></button>
-</div>
+<template>
+     <div>
+         <p>This is an example of a new components in VueJs</p>
+     </div>
+</template>
 
 <script>
     export default {
