@@ -20,6 +20,17 @@ class MainController extends AbstractController
    */
   public function test()
   {
-    return $this->render('test.html.twig');
+    $cacheKey = '123';
+
+    $cachedItem = $this->get('cache.app')->getItem($cacheKey);
+
+    if (false === $cachedItem->isHit()) {
+      $cachedItem->set($cacheKey, 'some value');
+      $this->get('cache.app')->save($cachedItem);
+    }
+
+    return $this->render('test.html.twig', [
+      'hit' => $cachedItem->isHit(),
+    ]);
   }
 }

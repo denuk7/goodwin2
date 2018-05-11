@@ -29,4 +29,5 @@ return [
     Symfony\Bundle\AclBundle\AclBundle::class => ['all' => true],
     JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
     Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle::class => ['all' => true],
+    SymfonyBundles\RedisBundle\SymfonyBundlesRedisBundle::class => ['all' => true],
 ];
